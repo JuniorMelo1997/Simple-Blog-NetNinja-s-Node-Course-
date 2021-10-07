@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/nav.ejs") %>
+
+    <div class="details">
+        <div class="blogs content">
+            <h2>All blogs</h2>
+    
+                <h3><%= blog.title %></h3>
+                <p><%= blog.snippet%></p>
+                <p><%= blog.body %></p>
+        </div>
+        
+        <div>
+            <a class="delete" data-doc="<%= blog._id %>">Delete</a>
+        </div>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+
+    <script src="/delete.js"></script>
+</body>
+</html>
